@@ -8,8 +8,6 @@ An automated, interactive "TV show" generator featuring Team Fortress 2 characte
 
 [![AI_TF2 Demo](./demo.gif)](./demo.mp4)
 
-*Click the GIF above to watch the full video with sound.*
-
 ## Download & Play
 
 **[Download the latest release here](https://github.com/TheSimonella/AI_TF2/releases)**
