@@ -4,6 +4,14 @@ An automated, interactive "TV show" generator featuring Team Fortress 2 characte
 
 ![Architecture Diagram](./architecture_diagram_v2.png)
 
+## Download & Play
+
+**[Download the latest release here](https://github.com/TheSimonella/AI_TF2/releases)**
+
+1.  Download `AI_TF2_Client.zip` from the Releases page.
+2.  Extract the zip file.
+3.  Run `2fort.exe` to start the client.
+
 ## Architecture
 
 The system consists of three main components:
