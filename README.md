@@ -6,9 +6,9 @@ An automated, interactive "TV show" generator featuring Team Fortress 2 characte
 
 ## 📺 Watch the Demo
 
-[![AI_TF2 Demo](https://img.youtube.com/vi/btB0fUyeYF8/0.jpg)](https://www.youtube.com/watch?v=btB0fUyeYF8&t=14318s)
+[![AI_TF2 Demo](https://img.youtube.com/vi/btB0fUyeYF8/0.jpg)](./demo.mp4)
 
-*Click the image above to watch a demo of the system in action (starts at 3:58:38).*
+*Click the image above to watch a demo of the system in action.*
 
 ## Download & Play
 
