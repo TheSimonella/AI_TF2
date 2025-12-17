@@ -8,74 +8,103 @@ An automated, interactive "TV show" generator featuring Team Fortress 2 characte
 
 **[Download the latest release here](https://github.com/TheSimonella/AI_TF2/releases)**
 
-1.  Download `AI_TF2_Client.zip` from the Releases page.
-2.  Extract the zip file.
-3.  Run `2fort.exe` to start the client.
-
-## Architecture
-
-The system consists of three main components:
-
-1.  **AI Director (`ai_director-fake-you`)**: The core orchestration service. It manages the story generation pipeline, interfacing with the LLM for scripts and FakeYou for TTS.
-2.  **Discord Bot (`ai_discord_bot-main`)**: The community interface. It handles user suggestions, voting queues, and communicates with the Director.
-3.  **Unity Client**: The visual renderer. It polls the Director for new scenarios and plays them out in real-time.
+> [!IMPORTANT]
+> **You must run the backend services locally for the client to work.**
+> The client connects to `localhost:3001` to fetch stories. If you only run the `.exe`, it will sit on a loading screen forever.
 
 ## Prerequisites
 
--   **Node.js** (v16 or higher)
--   **MongoDB** (Atlas or Local)
--   **Unity** (2021.3 or higher recommended)
--   **Local LLM** (e.g., Oobabooga Text Generation WebUI running on port 5001)
--   **FakeYou Account** (for TTS API access)
+To run the full system (Backend + Client), you need:
 
-## Setup
+1.  **Node.js** (v16+): [Download](https://nodejs.org/)
+2.  **MongoDB**: [Download Community Server](https://www.mongodb.com/try/download/community) or use [MongoDB Atlas](https://www.mongodb.com/atlas).
+3.  **Local LLM**: A text generation API running on port `5001`. We recommend [Oobabooga Text Generation WebUI](https://github.com/oobabooga/text-generation-webui) with the `api` flag enabled.
+4.  **FakeYou Account**: Sign up at [FakeYou.com](https://fakeyou.com/) (needed for voice generation).
+5.  **Unity** (Optional): Only needed if you want to modify the game client (add characters, maps, etc.). Recommended version: 2021.3 LTS.
 
-### 1. AI Director
+## Setup Guide
 
+### 1. Configure the Director (The Brain)
 1.  Navigate to `ai_director-fake-you/ai_director-fake-you`.
 2.  Install dependencies:
     ```bash
     npm install
     ```
-3.  Create a `.env` file based on `.env.example` and fill in your credentials:
+3.  Create a `.env` file (copy from `.env.example`) and fill in your details:
     ```env
-    OPENAI_API_KEY=your_openai_key_here
-    MONGODB_URI=your_mongodb_connection_string
-    MONGODB_PASSWORD=your_mongodb_password
+    OPENAI_API_KEY=sk-... (Or your local LLM key if applicable)
+    MONGODB_URI=mongodb://localhost:27017/Director
     ```
-4.  Start the service:
-    ```bash
-    npm start
-    ```
+    *Note: By default, the system expects a Local LLM on port 5001. If using OpenAI, you may need to modify `src/storyController.js`.*
 
-### 2. Discord Bot
-
+### 2. Configure the Discord Bot (The Interface)
 1.  Navigate to `ai_discord_bot-main/ai_discord_bot-main`.
 2.  Install dependencies:
     ```bash
     npm install
     ```
-3.  Create a `.env` file based on `.env.example`:
+3.  Create a `.env` file:
     ```env
-    DISCORD_TOKEN=your_discord_bot_token
-    MONGODB_URI=your_mongodb_connection_string
+    DISCORD_TOKEN=your_bot_token
+    MONGODB_URI=mongodb://localhost:27017/Director
     ```
-4.  Start the bot:
+
+### 3. Launching the Show
+Order matters! Run these in separate terminals:
+
+1.  **Start the Director**:
     ```bash
+    cd ai_director-fake-you/ai_director-fake-you
     npm start
     ```
+2.  **Start the Bot**:
+    ```bash
+    cd ai_discord_bot-main/ai_discord_bot-main
+    npm start
+    ```
+3.  **Start the Client**:
+    *   **Players**: Run `2fort.exe` from the downloaded release.
+    *   **Developers**: Open the `2fort` folder in Unity and press Play.
 
-### 3. Unity Client
+## Customization Guide
 
-1.  Open the `bobsponge_client-advanced` folder in Unity Hub.
-2.  Build and Run the project.
+Want to change the show? Here is how to modify each part.
 
-## Usage
+### 🧠 Changing the LLM / Story
+To change how stories are written (e.g., make them scarier, funnier, or use different characters):
+1.  Open `ai_director-fake-you/ai_director-fake-you/config/default.json`.
+2.  Edit the `chatGpt.dialoguePrompt` field.
+    *   **Tip**: Keep the formatting instructions (`'Character Name: Dialogue'`) intact, or the system won't be able to parse the script!
 
-1.  Join the configured Discord channel.
-2.  Type `!topic <your idea>` to suggest a scene.
-3.  Vote on suggestions.
-4.  Watch the Unity window (or stream) to see the winning topic performed!
+### 🎭 Adding New Characters
+This requires changes in **both** the Director and Unity.
+
+1.  **Director (Voices)**:
+    *   Find a voice model token on [FakeYou.com](https://fakeyou.com/).
+    *   Open `ai_director-fake-you/ai_director-fake-you/config/default.json`.
+    *   Add the character to the `fakeYou.voices` list: `"MyChar": "model_token_here"`.
+    *   Update the `dialoguePrompt` to include the new character name.
+
+2.  **Unity (Visuals)**:
+    *   Import your character model into the `2fort` Unity project.
+    *   Add the `CharacterBehaviour` script to the model.
+    *   Assign an **Animator Controller** with `walking`, `talking`, and `idling` boolean parameters.
+    *   Find the `ScenarioManager` object in the scene.
+    *   Add your new character GameObject to the `Characters` list in the Inspector.
+    *   **Important**: The GameObject name in Unity MUST match the name used in `default.json` exactly.
+
+### 🗺️ Changing the Map
+1.  Create a new Scene in Unity.
+2.  Copy the `ScenarioManager` object from the `SampleScene` to your new scene.
+3.  Move the characters and cameras to fit your new map.
+4.  Bake the NavMesh (Window > AI > Navigation) so characters can walk around.
+
+### 💃 Adding Custom Actions (Dancing, Fighting)
+Currently, the system only supports **Talking**, **Walking**, and **Idling**. To add new actions:
+1.  **Unity**: Add the animation to your Animator Controller and create a trigger/bool (e.g., `dancing`).
+2.  **Code**: Modify `CharacterBehaviour.cs` to handle the new state.
+3.  **Logic**: Modify `ScenarioManager.cs` to trigger the action.
+    *   *Advanced*: You will need to update the LLM prompt to output actions (e.g., `[Action: Dance]`) and update `storyController.js` to parse them.
 
 ## License
 
