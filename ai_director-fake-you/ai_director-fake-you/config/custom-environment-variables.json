@@ -1,0 +1,9 @@
+{
+  "chatGpt": {
+    "secret": "OPENAI_API_KEY"
+  },
+  "mongoDb": {
+    "connectionString": "MONGODB_URI",
+    "password": "MONGODB_PASSWORD"
+  }
+}

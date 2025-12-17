@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs
+*.njsproj
+*.sln
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Project Specific Secrets (DO NOT COMMIT)
+AI_TF2.txt
+ai_sponge.txt
+TF2.txt
+TF2 Davinci Test.txt
+GPT 3.5 code.docx
+Rules and Guidelines for Moderators AI_TF2.docx
+~$T 3.5 code.docx
+~$les and Guidelines for Moderators AI_TF2.docx
+
+# Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+/[Uu]ser[Ss]ettings/
+
+# Build Output (Too large for GitHub)
+Client Build/

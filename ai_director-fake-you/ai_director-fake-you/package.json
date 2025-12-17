@@ -1,0 +1,22 @@
+{
+  "name": "director",
+  "version": "1.0.0",
+  "description": "The writer and director for AI Generated Shows",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Claris Richter",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.8.1",
+    "config": "^3.3.12",
+    "express": "^4.18.2",
+    "mongodb": "^5.1.0",
+    "node-cron": "^3.0.2",
+    "node-fetch": "^2.6.1",
+    "open": "^10.1.0",
+    "uuid": "^11.1.0",
+    "winston": "^3.17.0"
+  }
+}

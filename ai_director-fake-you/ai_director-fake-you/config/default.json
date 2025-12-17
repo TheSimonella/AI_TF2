@@ -1,0 +1,29 @@
+{
+  "chatGpt": {
+    "secret": "",
+    "dialoguePrompt": "Generate a conversation script for a Team Fortress 2 TV show. The conversation must be entirely in the form of character dialogue. Each line must follow exactly this format: 'Character Name: Dialogue'. Do not include any additional formatting, actions, or instructions. Only include dialogue lines and ensure that every dialogue line is complete (do not start a new line unless the dialogue is finished). Use only these characters: RED Demoman, BLU Demoman, RED Engineer, BLU Engineer, RED Heavy, BLU Heavy, RED Pyro, BLU Pyro, RED Medic, BLU Medic, RED Scout, BLU Scout, RED Sniper, BLU Sniper, RED Soldier, BLU Soldier, RED Spy, BLU Spy. Do not use more than 9 characters in a single scene. Make sure the conversation fully covers the topic and instructions. You may generate up to 5000 tokens to complete the conversation, but only generate as many tokens as necessary. The topic is <topic>"
+  },
+  "fakeYou": {
+    "speak": "https://api.fakeyou.com/tts/inference",
+    "speak_status": "https://api.fakeyou.com/tts/job",
+    "voices": {
+      "Scout": "weight_bwbb3f6zq39wx37ppnagbzcx6",
+      "Engineer": "weight_s1rdjqqgtg1db6rw7fnrppchj",
+      "Soldier": "weight_d93dk482gjrvxjssvkeh1jp7m",
+      "Medic": "weight_fdcf1csc43mmnza5t9pbdhs5c",
+      "Demoman": "weight_w57evactjaav749evbv9n4wdj",
+      "Spy": "weight_fnpejsx4hkzcn9150ahyqgkmj",
+      "Heavy": "weight_gvy6kw2qjym9zt0xxffrq0pz6",
+      "Sniper": "weight_d6s8p0ennetbj132eqgrcan47",
+      "Pyro": "weight_msq6440ch8hj862nz5y255n8j"
+    }
+  },
+  "mongoDb": {
+    "connectionString": "mongodb+srv://<username>:<password>@tf2.mzxok.mongodb.net/",
+    "username": "TF2",
+    "password": ""
+  },
+  "streamElements": {
+    "accountId": "65048c6d72c3edd654c94f0b"
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "discord": {
+        "token": "DISCORD_TOKEN"
+    },
+    "mongoDb": {
+        "connectionString": "MONGODB_URI"
+    }
+}

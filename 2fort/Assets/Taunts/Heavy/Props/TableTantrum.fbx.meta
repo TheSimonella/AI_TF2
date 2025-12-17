@@ -1,0 +1,192 @@
+fileFormatVersion: 2
+guid: 24a3ded6787404043bd82d09c86c61e1
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Apple01_JNT
+    100002: Apple01_JNT_end
+    100004: Apple02_JNT
+    100006: Apple02_JNT_end
+    100008: Baguette_JNT
+    100010: Baguette_JNT_end
+    100012: Bottle_JNT
+    100014: Bottle_JNT_end
+    100016: Bread_Ration_JNT
+    100018: Bread_Ration_JNT_end
+    100020: Corn_JNT
+    100022: Corn_JNT_end
+    100024: Food_JNT
+    100026: HAM_JNT
+    100028: HAM_JNT_end
+    100030: heavy_table_flip_prop
+    100032: heavy_table_flip_prop_skeleton
+    100034: Plate_JNT
+    100036: Plate_JNT_end
+    100038: Pot_JNT
+    100040: Pot_JNT_end
+    100042: Root
+    100044: Steak001_JNT
+    100046: SteakBite_JNT
+    100048: SteakBite_JNT_end
+    100050: Table_JNT
+    100052: Table_JNT_end
+    100054: //RootNode
+    400000: Apple01_JNT
+    400002: Apple01_JNT_end
+    400004: Apple02_JNT
+    400006: Apple02_JNT_end
+    400008: Baguette_JNT
+    400010: Baguette_JNT_end
+    400012: Bottle_JNT
+    400014: Bottle_JNT_end
+    400016: Bread_Ration_JNT
+    400018: Bread_Ration_JNT_end
+    400020: Corn_JNT
+    400022: Corn_JNT_end
+    400024: Food_JNT
+    400026: HAM_JNT
+    400028: HAM_JNT_end
+    400030: heavy_table_flip_prop
+    400032: heavy_table_flip_prop_skeleton
+    400034: Plate_JNT
+    400036: Plate_JNT_end
+    400038: Pot_JNT
+    400040: Pot_JNT_end
+    400042: Root
+    400044: Steak001_JNT
+    400046: SteakBite_JNT
+    400048: SteakBite_JNT_end
+    400050: Table_JNT
+    400052: Table_JNT_end
+    400054: //RootNode
+    2100000: models_player_items_heavy_sous_vide_props
+    2100002: models_player_items_heavy_sous_vide_sardines
+    2100004: models_player_items_heavy_plate
+    2100006: models_weapons_c_items_c_bread_baguette
+    2100008: models_props_medieval_meats
+    2100010: models_player_items_heavy_sous_vide_wine_bottle
+    2100012: models_player_items_heavy_sous_vide_table01
+    2100014: models_player_items_heavy_sous_vide_steak01
+    4300000: heavy_table_flip_prop
+    9500000: //RootNode
+    13700000: heavy_table_flip_prop
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: models_player_items_heavy_plate
+    second: {fileID: 2100000, guid: 43033333e6d8151489e01fa040a46e41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: models_player_items_heavy_sous_vide_props
+    second: {fileID: 2100000, guid: 1803637ebfadefb4b8f5cee84886f8f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: models_player_items_heavy_sous_vide_sardines
+    second: {fileID: 2100000, guid: 48010b1f4e135334c8ef4df26fc82fb8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: models_player_items_heavy_sous_vide_steak01
+    second: {fileID: 2100000, guid: 2576f79e78a1bf842819a3caeabf6a3d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: models_player_items_heavy_sous_vide_table01
+    second: {fileID: 2100000, guid: 3dbc2532367d5e34db8f3eb0fef538cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: models_player_items_heavy_sous_vide_wine_bottle
+    second: {fileID: 2100000, guid: e7649342c72349e469bb52267cd68c8c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: models_props_medieval_meats
+    second: {fileID: 2100000, guid: 73e3b67c201663e4795db1179fafa194, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: models_weapons_c_items_c_bread_baguette
+    second: {fileID: 2100000, guid: 4fc15f6c04a9d844e87fd079a057ef4f, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
