@@ -4,6 +4,12 @@ An automated, interactive "TV show" generator featuring Team Fortress 2 characte
 
 ![Architecture Diagram](./architecture_diagram_v2.png)
 
+## 📺 Watch the Demo
+
+[![AI_TF2 Demo](https://img.youtube.com/vi/btB0fUyeYF8/0.jpg)](https://www.youtube.com/watch?v=btB0fUyeYF8&t=14318s)
+
+*Click the image above to watch a demo of the system in action (starts at 3:58:38).*
+
 ## Download & Play
 
 **[Download the latest release here](https://github.com/TheSimonella/AI_TF2/releases)**
